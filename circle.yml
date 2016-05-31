@@ -8,6 +8,6 @@ dependencies:
 
 test:
   pre:
-    - gradle -version
+    - echo $GRADLE_HOME
 
 
