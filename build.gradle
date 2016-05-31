@@ -69,15 +69,15 @@ dependencies {
     testCompile "org.springframework.boot:spring-boot-starter-test"
 }
 
-task deploy(type: Copy, dependsOn: 'war') {
-    from 'build/libs'
-
-    def wildflyHome = System.getenv("WILDFLY_HOME");
-
-    if (wildflyHome == null) {
-        throw new GradleException("WILDFLY_HOME is not set");
-    }
-
-    def folderUrlDeployment = "$wildflyHome/standalone/deployments";
-    into folderUrlDeployment
-}
+//task deploy(type: Copy, dependsOn: 'war') {
+//    from 'build/libs'
+//
+//    def wildflyHome = System.getenv("WILDFLY_HOME");
+//
+//    if (wildflyHome == null) {
+//        throw new GradleException("WILDFLY_HOME is not set");
+//    }
+//
+//    def folderUrlDeployment = "$wildflyHome/standalone/deployments";
+//    into folderUrlDeployment
+//}
