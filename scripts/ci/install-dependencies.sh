@@ -13,7 +13,7 @@ fi
 
 gradle_version=$(echo $($GRADLE_HOME/bin/gradle -version) | awk '{ print $3; }')
 
-if [[ "$gradle_version" > "2.10" ]]; then
+if [[ "$gradle_version" < "2.10" ]]; then
       sudo add-apt-repository ppa:cwchien/gradle -y
       sudo apt-get clean
       sudo apt-get update
