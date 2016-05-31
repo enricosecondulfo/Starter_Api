@@ -5,7 +5,8 @@ dependencies:
       tar xvzf mongodb-linux-x86_64-3.2.6.tgz &&
       sudo mv mongodb-linux-x86_64-3.2.6/bin/* /usr/bin/ &&
       sudo service mongodb start
-    - sudo add-apt-repository ppa:cwchien/gradle && sudo apt-get update
+    - sudo add-apt-repository ppa:cwchien/gradle -y;
+      sudo apt-get update
 
   override:
     - java -version
