@@ -11,7 +11,7 @@ if [ ! -e mongodb-linux-x86_64-3.2.6/bin ]; then
     sudo service mongod start
 fi
 
-gradle_version = $(echo $($GRADLE_HOME/bin/gradle -version) | awk '{ print $3; }')
+gradle_version=$(echo $($GRADLE_HOME/bin/gradle -version) | awk '{ print $3; }')
 
 if [[ "$gradle_version" > "2.10" ]]; then
     echo "Installed"
