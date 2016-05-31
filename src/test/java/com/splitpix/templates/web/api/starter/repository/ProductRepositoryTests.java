@@ -44,7 +44,7 @@ public class ProductRepositoryTests {
         Product product = products.findFirst().orElse(null);
 
         assertThat(product).isNotEqualTo(null);
-        assertThat(product.getName()).isEqualTo("test 0");
+        assertThat(product.getName()).isEqualTo("test 99");
     }
 
     @Test
