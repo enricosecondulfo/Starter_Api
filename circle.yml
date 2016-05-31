@@ -8,6 +8,6 @@ dependencies:
 
   override:
     - java -version
-    - $GRADLE_HOME
+    - echo $GRADLE_HOME
     - gradle -version
 
