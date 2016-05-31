@@ -4,7 +4,7 @@ dependencies:
     - mongodb-linux-x86_64-3.2.6.tgz
 
   pre:
-    - bash ./scripts/ci/install_dependencies.sh
+    - bash ./scripts/ci/install-dependencies.sh
 
   override:
     - java -version
