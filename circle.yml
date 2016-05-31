@@ -7,6 +7,7 @@ dependencies:
       sudo service mongodb start
 
   override:
-    - echo "Test"
-    - echo $GRADLE_HOME
+    - java -version
+    - $GRADLE_HOME
+    - gradle -version
 
