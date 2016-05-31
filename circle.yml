@@ -4,9 +4,9 @@ dependencies:
     - sudo service mongodb stop && curl -L -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.2.6.tgz &&
       tar xvzf mongodb-linux-x86_64-3.2.6.tgz &&
       sudo mv mongodb-linux-x86_64-3.2.6/bin/* /usr/bin/ &&
-      sudo service mongodb start && echo $GRADLE_HOME
+      sudo service mongodb start
 
   override:
-    - (echo "Test")
-    - (echo $GRADLE_HOME)
+    - echo "Test"
+    - echo $GRADLE_HOME
 
