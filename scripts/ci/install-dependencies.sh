@@ -14,8 +14,9 @@ fi
 gradle_version=$(echo $($GRADLE_HOME/bin/gradle -version) | awk '{ print $3; }')
 
 if [[ "$gradle_version" > "2.10" ]]; then
-    echo "Installed"
-
-else
-    echo "Not installed"
+      sudo add-apt-repository ppa:cwchien/gradle -y
+      sudo apt-get clean
+      sudo apt-get update
+      sudo apt-get --purge remove gradle
+      sudo apt-get install gradle
 fi
