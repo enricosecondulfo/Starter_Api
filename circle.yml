@@ -6,7 +6,10 @@ dependencies:
       sudo mv mongodb-linux-x86_64-3.2.6/bin/* /usr/bin/ &&
       sudo service mongodb start
     - sudo add-apt-repository ppa:cwchien/gradle -y;
-      sudo apt-get update
+      sudo apt-get clean;
+      sudo apt-get update;
+      sudo apt-get --purge remove gradle;
+      sudo apt-get install gradle;
 
   override:
     - java -version
