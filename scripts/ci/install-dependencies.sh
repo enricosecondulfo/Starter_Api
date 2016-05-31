@@ -11,9 +11,9 @@ if [ ! -e mongodb-linux-x86_64-ubuntu1404-3.2.6 ]; then
     sudo service mongod start
 fi
 
-echo $GRADLE_HOME
+gradle_version=$(echo $(gradle -version) | awk '{ print $3; }')
+echo $gradle_version
 
-#gradle_version=$(echo $($GRADLE_HOME/bin/gradle -version) | awk '{ print $3; }')
 #
 #if [[ "$gradle_version" < "2.10" ]]; then
 #      sudo add-apt-repository ppa:cwchien/gradle -y
