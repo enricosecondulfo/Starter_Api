@@ -20,3 +20,4 @@ if [[ "$gradle_version" < "2.10" ]]; then
       sudo apt-get --purge remove gradle
       sudo apt-get install gradle
 fi
+
