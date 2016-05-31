@@ -6,4 +6,8 @@ dependencies:
       sudo mv mongodb-linux-x86_64-3.2.6/bin/* /usr/bin/ &&
       sudo service mongodb start
 
+test:
+  pre:
+    - gradle -version
+
 
