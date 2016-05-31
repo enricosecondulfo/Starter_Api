@@ -12,13 +12,11 @@ if [ ! -e mongodb-linux-x86_64-ubuntu1404-3.2.6 ]; then
 fi
 
 gradle_version=$(echo $(gradle -version) | awk '{ print $3; }')
-echo $gradle_version
 
-#
-#if [[ "$gradle_version" < "2.10" ]]; then
-#      sudo add-apt-repository ppa:cwchien/gradle -y
-#      sudo apt-get clean
-#      sudo apt-get update
-#      sudo apt-get --purge remove gradle
-#      sudo apt-get install gradle
-#fi
+if [[ "$gradle_version" < "2.10" ]]; then
+      sudo add-apt-repository ppa:cwchien/gradle -y
+      sudo apt-get clean
+      sudo apt-get update
+      sudo apt-get --purge remove gradle
+      sudo apt-get install gradle
+fi
