@@ -1,15 +1,10 @@
 
 dependencies:
+  cache_directories:
+    - mongodb-linux-x86_64-3.2.6.tgz
+
   pre:
-    - sudo service mongodb stop && curl -L -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.2.6.tgz &&
-      tar xvzf mongodb-linux-x86_64-3.2.6.tgz &&
-      sudo mv mongodb-linux-x86_64-3.2.6/bin/* /usr/bin/ &&
-      sudo service mongodb start
-    - sudo add-apt-repository ppa:cwchien/gradle -y;
-      sudo apt-get clean;
-      sudo apt-get update;
-      sudo apt-get --purge remove gradle;
-      sudo apt-get install gradle;
+    - bash scripts/ci/install_dependencies.sh
 
   override:
     - java -version
