@@ -6,4 +6,7 @@ dependencies:
       sudo mv mongodb-linux-x86_64-3.2.6/bin/* /usr/bin/ &&
       sudo service mongodb start && echo $GRADLE_HOME
 
+  override:
+    - (echo "Test")
+    - (echo $GRADLE_HOME)
 
