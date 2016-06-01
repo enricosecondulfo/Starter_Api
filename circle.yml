@@ -10,4 +10,5 @@ dependencies:
     - java -version
     - echo $GRADLE_HOME
     - gradle -version
+    - echo $API_KEY
 
