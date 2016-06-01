@@ -2,6 +2,7 @@
 dependencies:
   cache_directories:
     - mongodb-linux-x86_64-ubuntu1404-3.2.6
+    - ~/.gradle
 
   pre:
     - bash ./scripts/ci/install-dependencies.sh
