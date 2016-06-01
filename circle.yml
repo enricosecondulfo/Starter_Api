@@ -8,8 +8,5 @@ dependencies:
     - bash ./scripts/ci/install-dependencies.sh
 
   override:
-    - java -version
-    - echo $GRADLE_HOME
-    - gradle -version
-    - echo $API_KEY
+    - gradle dependencies
 
